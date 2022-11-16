@@ -1,0 +1,24 @@
+{% extends "../../static/AppComics/index.html" %}
+
+{% load static %}
+
+{% block contenido_dinamico%}
+
+    <h1> Agregar dibujantes</h1>
+    
+    <form action="" method="POST">{% csrf_token %}
+        <form action="" method="POST">{% csrf_token %}
+        
+            {% comment %} <p>Nombre: </p>
+            <input type="text" name="nombre"></input>
+            <p>País: </p>
+            <input type="text" name="país"></input>{% endcomment %}
+      
+            <table>{{miForm.as_table}}</table>
+
+            <button type="submit" value="Enviar">Enviar</button> 
+
+    </form>
+
+
+{%endblock%}

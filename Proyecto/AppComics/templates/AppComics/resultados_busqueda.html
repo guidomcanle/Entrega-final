@@ -1,0 +1,26 @@
+{% extends "../../static/AppComics/index.html" %} {% block contenido_dinamico%}
+
+<p>Estamos buscando el comic: {{titulo}}</p>
+
+{% if comics %}
+
+<ul>
+  {% for comic in comics%}
+  <li>{{comic.titulo}}</li>
+  <p>De:</p>
+  <ul>
+    <p>Guionista:</p>
+    <li>{{comic.guionista}}</li>
+    <p>Dibujante:</p>
+    <li>{{comic.dibujante}}</li>
+    <p>Otros artistas:</p>
+    <li>{{comic.otros_artistas}}</li>
+  </ul>
+  <p>Editado por:</p>
+  <p>
+    <li>{{comic.editorial}}</li>
+    {%endfor%}
+  </p>
+</ul>
+
+{%endif%} {%endblock%}
